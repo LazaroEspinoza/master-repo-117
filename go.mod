@@ -1,3 +1,3 @@
-module github.com/MASTER-REPO-117/triangulo
+module github.com/MASTER-REPO-117
 
-go 1.21.1
+go 1.21.3
