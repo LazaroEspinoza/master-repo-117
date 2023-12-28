@@ -2,11 +2,25 @@ package main
 
 import (
 	"fmt"
+	"log"
 
 	"github.com/MASTER-REPO-117/greetings"
 )
 
 func main() {
-	message := greetings.Hello("Lazaro")
-	fmt.Println(message)
+	log.SetPrefix("Greetings:\n")
+	log.SetFlags(0)
+
+	names := []string{"Christopher", "Pier", "Camila", "Camerina", "Raymundo"}
+	messages, err := greetings.Hellos(names)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	//messages, err := greetings.Hello(names())
+	//if err != nil {
+	//	log.Fatal(err)
+	//}
+	fmt.Println(messages)
+
 }
